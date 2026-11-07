@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ayesha's Personal Expense Tracker</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-index">
+<div class="app-shell">
+  <aside class="sidebar">
+    <a class="brand" href="index.html"><span class="brand-mark">✦</span><span>Ayesha<span class="brand-small">MoneyBloom</span></span></a>
+    <div class="profile"><div class="avatar">A</div><div><b>Ayesha</b><small>Personal workspace</small></div></div>
+    <nav>
+      <a class="nav-link active" href="index.html"><span>▦</span> Overview</a>
+      <a class="nav-link" href="transactions.html"><span>↕</span> Transactions</a>
+      <a class="nav-link" href="categories.html"><span>◈</span> Categories</a>
+      <a class="nav-link" href="budgets.html"><span>◎</span> Budgets</a>
+      <a class="nav-link" href="reports.html"><span>▥</span> Reports</a>
+    </nav>
+    <div class="sidebar-bottom"><div class="tip-card"><span>✧ A little tip</span><p>Small savings today create bigger possibilities tomorrow.</p></div><a class="nav-link" href="settings.html"><span>⚙</span> Settings & data</a></div>
+  </aside>
+  <main class="main-content">
+    <header class="topbar"><div><span class="eyebrow">YOUR FINANCIAL SPACE</span><h1>Good day, Ayesha <span>✿</span></h1><p class="muted">Here’s your money snapshot at a glance.</p></div><div class="top-actions"><span class="date-pill" id="todayDate"></span><a class="button primary" href="transactions.html">＋ Add transaction</a></div></header>
+    <section class="hero-banner"><div><span class="eyebrow light">A CLEARER VIEW OF YOUR MONEY</span><h2>Make every rupee<br>work with purpose.</h2><p>Track your income, understand your spending and grow your savings — one day at a time.</p><a class="button light-button" href="reports.html">Explore reports <span>→</span></a></div><div class="hero-art"><div class="sun"></div><div class="plant plant-one">♧</div><div class="coin coin-one">₹</div><div class="coin coin-two">₹</div><div class="mini-card"><small>MONTHLY SAVINGS</small><strong id="heroSavings">₹0.00</strong><span>Keep it growing ✨</span></div></div></section>
+    <section class="photo-feature photo-home" aria-label="A calm workspace for smarter money decisions">
+      <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=85" alt="A calm workspace for smarter money decisions" loading="lazy">
+      <div class="photo-feature-shade"></div>
+      <div class="photo-feature-copy"><span class="eyebrow light">MONEYBLOOM · HOME</span><h2>Plan your money with clarity</h2><p>Small steps today. More confident choices tomorrow.</p></div>
+    </section>
+    <section class="stats-grid">
+      <article class="stat-card"><div class="stat-top"><span>Total balance</span><span class="stat-icon purple">◉</span></div><strong id="balance">₹0.00</strong><small>Income minus expenses</small></article>
+      <article class="stat-card"><div class="stat-top"><span>Total income</span><span class="stat-icon green">↗</span></div><strong id="income">₹0.00</strong><small>This month</small></article>
+      <article class="stat-card"><div class="stat-top"><span>Total expenses</span><span class="stat-icon coral">↘</span></div><strong id="expense">₹0.00</strong><small>This month</small></article>
+      <article class="stat-card"><div class="stat-top"><span>Budget remaining</span><span class="stat-icon yellow">◎</span></div><strong id="remaining">₹0.00</strong><small>Across your budgets</small></article>
+    </section>
+    <section class="content-grid">
+      <article class="panel"><div class="panel-heading"><div><h3>Spending overview</h3><p class="muted">Income vs expenses this month</p></div><a href="reports.html" class="text-link">View report →</a></div><div class="chart-wrap"><canvas id="overviewChart" height="210"></canvas></div></article>
+      <article class="panel"><div class="panel-heading"><div><h3>Budget progress</h3><p class="muted">Your monthly limits</p></div><a href="budgets.html" class="text-link">Manage →</a></div><div id="budgetPreview" class="budget-preview"></div></article>
+    </section>
+    <section class="panel recent-panel"><div class="panel-heading"><div><h3>Recent transactions</h3><p class="muted">Your latest money movements</p></div><a href="transactions.html" class="text-link">See all →</a></div><div class="table-scroll"><table><thead><tr><th>Transaction</th><th>Category</th><th>Date</th><th>Type</th><th class="right">Amount</th></tr></thead><tbody id="recentRows"></tbody></table></div></section>
+    <footer>Made with care for <b>Ayesha</b> · MoneyBloom Expense Tracker</footer>
+  </main>
+</div>
+<script src="js/app.js"></script><script>initDashboard();</script>
+</body></html>
